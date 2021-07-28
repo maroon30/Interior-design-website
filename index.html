@@ -1,0 +1,433 @@
+<!-- @author Sony
+# I tried to clone this -> https://gatsby-airtable-design-project.netlify.app/ but in a more simpler way
+# This is just a design website and it is not functional
+# Hope you guys like it! -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior design | Create</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Google font - 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+
+    <!-- Google font - 2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /*  Global */
+        .heading1 {
+            font-family: 'Otomanopee One', sans-serif;
+            font-size: 2.5rem;
+        }
+    
+        .heading2 {
+            text-transform: uppercase;
+            font-family: 'Encode Sans SC', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 800;
+        }
+    
+        .heading3 {
+            font-size: 3rem;
+            text-align: center;
+            padding: 3%;
+        }
+    
+        .para {
+            font-size: 1.1rem;
+        }
+    
+        .slash {
+            color: rgb(186, 93, 44);
+            padding: 0% 1%;
+        }
+    
+        svg {
+            stroke: rgb(186, 93, 44);
+            fill: rgb(186, 93, 44);
+            stroke-width: 0;
+            height: 12vh;
+            width: 12vw;
+        }
+    
+        .apply-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+    /* Page - 1 */
+    #page1 {
+        background-image: url('https://gatsby-airtable-design-project.netlify.app/static/1f9f464a8fc63e93d102df52fd3ee874/c0672/mainBcg.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .nav {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1% 3%;
+    }
+
+    ul li a {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+    }
+
+    ul li a:hover {
+        color: white;
+    }
+
+    .logo {
+        color: white;
+        font-size: 2rem;
+        font-family: 'Encode Sans SC', sans-serif;
+        font-weight: 800;
+        user-select: none;
+    }
+
+    .logo:hover {
+        color: white;
+    }
+
+    #headings {
+        height: 90vh;
+        padding: 10%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    .projects-btn {
+        padding: 1% 3%;
+        background: transparent;
+        border: 2px solid white;
+        font-size: 1.5rem;
+        color: white;
+        letter-spacing: 3px;
+        transition: .5s;
+    }
+
+    .projects-btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* Page - 2 */
+    #page2 {
+        padding: 10% 5%;
+    }
+
+    .card {
+        border: none;
+    }
+
+    /* Page - 3 */
+    #page3 {
+        background-color: rgb(241, 245, 248);
+        padding: 8%;
+        text-align: center;
+    }
+
+    .latest-project-btn {
+        padding: 1% 2%;
+        text-transform: uppercase;
+        background: rgb(186, 93, 44);
+        font-size: 1.2rem;
+        margin: 3% auto;
+        color: white;
+    }
+
+    /* Page - 4 */
+    #page4 {
+        text-align: center;
+        padding: 5% 10%;
+    }
+
+    .testimonial-img {
+        border-radius: 100%;
+        margin: 20px;
+        width: 20%;
+    }
+
+    .carousel-item p {
+        padding: 0% 20%;
+        font-size: 1.2rem;
+        color: rgb(97, 131, 162);
+    }
+
+    .carousel-item h3 {
+        color: rgb(186, 93, 44);
+        text-transform: uppercase;
+    }
+
+    .carousel-item h5 {
+        color: rgb(84, 121, 155);
+    }
+
+    .prev-next {
+        background-color: rgb(97, 125, 152);
+    }
+
+    /* page5 */
+    #page5 p {
+        background: rgb(41, 41, 41);
+        color: white;
+        padding: 2%;
+        text-align: center;
+    }
+
+    @media (max-width: 736px) {
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        #headings {
+            padding: 1%;
+        }
+
+        .heading1 {
+            display: none;
+        }
+
+        .heading2 {
+            font-size: 3.5rem;
+        }
+
+        .heading3 {
+            font-size: 2.5rem;
+        }
+
+        .para {
+            font-size: 1rem;
+        }
+
+        .carousel-item p {
+            padding: 0% 11.5%;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Home Page -->
+    <section id="page1">
+        <nav class="nav navbar navbar-expand-lg navbar-dark">
+            <a class="logo navbar-brand" href="#">CREATE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="headings" class="apply-flex">
+            <h2 class="heading1">If You Can Dream It, We Can Create It</h2>
+            <h1 class="heading2">Let your home be Inique and Stylish</h1>
+            <button type="button" class="projects-btn btn">Projects</button>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- About Our Work page -->
+    <section id="page2">
+        <h1 class="heading3"><span class="slash">/</span>About Our Work</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class='card'>
+                    <div class="card-body">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M203.97 23l-18.032 4.844 11.656 43.468c-25.837 8.076-50.32 21.653-71.594 40.75L94.53 80.594l-13.218 13.22 31.376 31.374c-19.467 21.125-33.414 45.53-41.813 71.343l-42.313-11.343-4.843 18.063 42.25 11.313c-6.057 27.3-6.157 55.656-.345 83L23.72 308.78l4.843 18.064 41.812-11.22c6.693 21.225 17.114 41.525 31.25 59.876l-29.97 52.688-16.81 29.593 29.56-16.842 52.657-29.97c18.41 14.216 38.784 24.69 60.094 31.407l-11.22 41.844 18.033 4.81 11.218-41.905c27.345 5.808 55.698 5.686 83-.375l11.312 42.28 18.063-4.81-11.344-42.376c25.812-8.4 50.217-22.315 71.342-41.78l31.375 31.373 13.22-13.218-31.47-31.47c19.09-21.266 32.643-45.738 40.72-71.563l43.53 11.657 4.813-18.063-43.625-11.686c5.68-27.044 5.576-55.06-.344-82.063l43.97-11.78-4.813-18.063L440.908 197c-6.73-20.866-17.08-40.79-31.032-58.844l29.97-52.656 16.842-29.563-29.593 16.844-52.656 29.97c-17.998-13.875-37.874-24.198-58.657-30.906l11.783-44L309.5 23l-11.78 43.97c-27-5.925-55.02-6.05-82.064-.376L203.97 23zm201.56 85L297.25 298.313l-.75.437-40.844-40.875-148.72 148.72-2.186 1.25 109.125-191.75 41.78 41.78L405.532 108zm-149.686 10.594c21.858 0 43.717 5.166 63.594 15.47l-116.625 66.342-2.22 1.28-1.28 2.22-66.25 116.406c-26.942-52.04-18.616-117.603 25.03-161.25 26.99-26.988 62.38-40.468 97.75-40.468zm122.72 74.594c26.994 52.054 18.67 117.672-25.002 161.343-43.66 43.662-109.263 52.005-161.312 25.033l116.438-66.282 2.25-1.25 1.25-2.25 66.375-116.592z">
+                            </path>
+                        </svg>
+                        <h3>Mission</h3>
+                        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ratione animi ducimus
+                            neque, odio tenetur eligendi! Nisi, inventore? Tempore maiores fugit, praesentium laborum
+                            nostrum culpa?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class='card'>
+                    <div class="card-body">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M78.594 20.313c-20.396-.083-40.037 3.83-57.78 12.468C126.016 63.043 213.21 117.8 289.185 187.813c-9.978-45.738-40.414-87.43-79.375-117.78-11.143 8.35-27.725 8.505-41.156.75-13.402-7.74-21.53-22.143-19.906-35.938-23.19-9.237-47.145-14.438-70.156-14.532zm101.625 6.625c-5.215.166-9.516 2.475-11.532 5.968-3.442 5.962-.55 15.975 9.343 21.688 9.894 5.713 19.997 3.212 23.44-2.75 3.44-5.962.58-16.006-9.314-21.72-3.71-2.14-7.465-3.108-10.875-3.186-.354-.01-.714-.012-1.06 0zm-43.25 73.906L31.75 283.188c5.972 8.454 13.093 14.29 25.125 15.062l105.47-182.78c-8.03-5.31-16.5-10.178-25.376-14.626zm194.78 6.25l-17.406 10.78-10.22 66.657 38.313-59.124-10.687-18.312zm-140.344 61.72l-21.844 13.467 14.375 17.314 86.157-4.75-78.688-26.03zm209.75.686l-3.78 1.156-181.095 55.906-3.75 1.188-1.81 3.5-42.314 82.875-3.625 7.125 6.47 4.688 216.53 157.25 10.126 7.343 4.156-11.81 88.563-251.44 2.656-7.5-7-3.81-81.655-44.564-3.47-1.906zm-2.03 20.188l63.28 34.562-65.97 20.344-33.248-43.813 35.937-11.093zm-54.97 16.968l33.28 43.813L279 280.843l2.78-54.938 62.376-19.25zM262.78 231.78L260 286.72l-67.22 20.75 32.782-64.19 37.22-11.5zm202.5 11.126L400 428.312l4.063-166.5 61.218-18.906zm-80.06 24.72l-4.064 166.5-98.812-134.72 102.875-31.78zm-121.783 37.593L364.75 443.374 201.062 324.5l62.375-19.28z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                        <h3>Vision</h3>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vel libero velit explicabo
+                            doloremque cum incidunt, dolores placeat unde error ducimus consectetur veritatis in dicta?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class='card'>
+                    <div class="card-body">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M224.05 95.703c-7.08-.04-11.694 4.704-14.484 8.793-2.79 4.09-4.604 8.582-6.086 12.932-1.16 3.41-2.072 6.75-2.76 9.572h18.63c.357-1.242.74-2.505 1.17-3.77 1.185-3.48 2.706-6.816 3.916-8.59.498-.73.652-.846.712-.93l61.676.337c.063.084.25.225.764.97 1.208 1.755 2.72 5.04 3.904 8.467.407 1.18.768 2.356 1.11 3.516h18.656c-.69-2.773-1.597-6.045-2.75-9.387-1.484-4.3-3.304-8.75-6.096-12.804-2.792-4.055-7.357-8.72-14.363-8.757l-64-.35zM96 145c-5 0-11.05 2.777-15.637 7.363C75.777 156.95 73 163 73 168v21.275L132.816 279h12.758v-16h50v16H311v-16h50v16h18.184L439 189.275V168c0-5-2.777-11.05-7.363-15.637C427.05 147.777 421 145 416 145H96zm-23 76.725V376c0 5 2.777 11.05 7.363 15.637C84.95 396.223 91 399 96 399h320c5 0 11.05-2.777 15.637-7.363C436.223 387.05 439 381 439 376V221.725L388.816 297H361v41.188h-50V297H195.574v41.188h-50V297h-22.39L73 221.725zM163.574 281v39.188h14V281h-14zM329 281v39.188h14V281h-14z">
+                            </path>
+                        </svg>
+                        <h3>Work</h3>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam a, eum ratione expedita
+                            eligendi, magnam voluptatum iure dolore suscipit ab dolores illum nulla mollitia illo?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- About Us Page -->
+    <section id="page3">
+        <h1 class="heading3"><span class="slash">/</span>About Us</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique, porro quis veniam cum blanditiis harum debitis. Dolorum deleniti rem corrupti quas quo cupiditate nam vero consequuntur perferendis expedita, voluptatem, excepturi asperiores, impedit iusto totam!</p>
+        <button class="latest-project-btn btn apply-flex">Read More</button>
+    </section>
+
+
+
+
+
+    <!-- Reviews Page -->
+    <section id="page4">
+        <h1 class="heading3"><span class="slash">/</span>Reviews</h1>
+        <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="testimonial-img" src="https://gatsby-airtable-design-project.netlify.app/static/33e047618481378ddd730647f051dd97/c65bc/person-1.webp">
+                    <h3>Peter Smith</h3>
+                    <h5>Product Designer</h5>
+                    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi deleniti reprehenderit eveniet
+                        quos saepe sapiente!
+                    </p>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon"
+                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z">
+                        </path>
+                    </svg>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="testimonial-img" src="https://gatsby-airtable-design-project.netlify.app/static/4a246a3cd62cf45bd2dc251ab8715724/c65bc/person-2.webp">
+                    <h3>Maria Ferguson</h3>
+                    <h5>Office Manager</h5>
+                    <p class="para testimonial-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi deleniti
+                        reprehenderit eveniet quos saepe sapiente!</p>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon"
+                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z">
+                        </path>
+                    </svg>
+                </div>
+
+                <div class="carousel-item">
+                    <img class="testimonial-img" src="https://gatsby-airtable-design-project.netlify.app/static/14eef5eea880c398ed8bc056dbfa0b3e/c65bc/person-3.webp">
+                    <h3>John Doe</h3>
+                    <h5>Regular Guy</h5>
+                    <p class="para testimonial-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi deleniti
+                        reprehenderit eveniet quos saepe sapiente!</p>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon"
+                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#testimonials-carousel" role="button" data-slide="prev">
+                <span class="prev-next carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonials-carousel" role="button" data-slide="next">
+                <span class="prev-next carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Footer Page -->
+    <section id="page5">
+        <p>&copy; 2021 Sony. All rights reserved! </p>
+    </section>
+
+
+
+    <!-- Custom Script -->
+    <script>
+        alert('This is just a design website and it is not functional');
+    </script>
+
+
+
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
